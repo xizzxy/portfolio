@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { title } from "process";
 
 const projectsData = [
   {
@@ -26,21 +27,31 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "CollabAI",
-    description: "enhancing team productivity and communication with the help of AI - in progress",
+    title: "BudgetBuddy",
+    description: "BudgetBuddy is a user-friendly money management app that helps users track expenses, set savings goals, and maintain financial health through automated expense categorization and personalized budget insights.",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/xizzxy/ruby",
+    previewUrl: "https://budgetbudds.netlify.app/",
   },
+
   {
-    id: 5,
+    id: 6,
     title: "Who's that Pokemon?",
     description: "My first project, 'Who's that Pokémon,' a beginner-friendly website using CSS, HTML, and JavaScript. The game features a timed, five-question Pokémon guessing quiz with multiple-choice options and scores for user performance.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/xizzxy/who-is-that-pokemon/tree/main",
     previewUrl: "https://golden-ganache-ddd52b.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "Pantry Tracker",
+    description: "Developed a Pantry Tracker app with Firebase for user authentication and real-time database management, allowing users to efficiently organize their pantry by adding, removing, and searching for items. For a demo, login as guest@project2.com with password Guest123. ",
+    image: "/images/projects/6.png",
+    tag: [ "All", "Web"],
+    gitUrl: "https://github.com/xizzxy/pantryAPP",
+    previewUrl: "https://pantry-app-olive.vercel.app/",
   },
  
 ];
