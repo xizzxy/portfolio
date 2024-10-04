@@ -6,7 +6,16 @@ import { motion, useInView } from "framer-motion";
 import { title } from "process";
 
 const projectsData = [
-  {
+   {
+    id: 7,
+    title: "Money Mundo",
+    description: "We developed an API and trained a model using supervised learning to help immigrants improve their financial literacy by providing personalized guidance on building credit, managing debt, and making informed financial decisions.",
+    image: "/images/projects/7.png",
+    tag: [ "All", "Web"],
+    gitUrl: "https://github.com/salimaduen/Shellhack2024",
+    previewUrl: "https://devpost.com/software/money-mundo?ref_content=user-portfolio&ref_feature=in_progress",
+  },
+ {
     id: 1,
     title: "React Portfolio Website",
     description: "Created a personal portfolio website with NextJs and Tailwind to showcase my work and make it easily accessible",
@@ -36,7 +45,7 @@ const projectsData = [
   },
 
   {
-    id: 6,
+    id: 5,
     title: "Who's that Pokemon?",
     description: "My first project, 'Who's that Pokémon,' a beginner-friendly website using CSS, HTML, and JavaScript. The game features a timed, five-question Pokémon guessing quiz with multiple-choice options and scores for user performance.",
     image: "/images/projects/5.png",
@@ -45,7 +54,7 @@ const projectsData = [
     previewUrl: "https://golden-ganache-ddd52b.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Pantry Tracker",
     description: "Developed a Pantry Tracker app with Firebase for user authentication and real-time database management, allowing users to efficiently organize their pantry by adding, removing, and searching for items. For a demo, login as guest@project2.com with password Guest123. ",
     image: "/images/projects/6.png",
