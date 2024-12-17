@@ -9,26 +9,18 @@ const projectsData = [
    {
     id: 7,
     title: "Money Mundo",
-    description: "We developed an API and trained a model using supervised learning to help immigrants improve their financial literacy by providing personalized guidance on building credit, managing debt, and making informed financial decisions.",
+    description: "Integrated an API and trained a model using supervised learning to help immigrants improve their financial literacy by providing personalized guidance on building credit, managing debt, and making informed financial decisions.",
     image: "/images/projects/7.png",
     tag: [ "All", "Web"],
     gitUrl: "https://github.com/salimaduen/Shellhack2024",
     previewUrl: "https://devpost.com/software/money-mundo?ref_content=user-portfolio&ref_feature=in_progress",
   },
- {
-    id: 1,
-    title: "React Portfolio Website",
-    description: "Created a personal portfolio website with NextJs and Tailwind to showcase my work and make it easily accessible",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+
   
   {
     id: 3,
     title: "FitMate",
-    description: "This project uses computer vision and machine learning to create a virtual gym trainer, detecting exercise poses and providing real-time feedback. Fitmate offers various workouts, tracking your sets and performance.",
+    description: "Developed a virtual gym trainer that utilizes computer vision and machine learning to detect exercise poses and provide real-time feedback. Created to enhance workout experiences, Fitmate offers various exercise routines and actively tracks your sets and performance, helping you achieve your fitness goals efficiently.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/xizzxy/fitmate",
@@ -37,7 +29,7 @@ const projectsData = [
   {
     id: 4,
     title: "BudgetBuddy",
-    description: "BudgetBuddy is a user-friendly money management app that helps users track expenses, set savings goals, and maintain financial health through automated expense categorization and personalized budget insights.",
+    description: "Engineered a user-friendly money management app that helps users track expenses, set savings goals, and maintain financial health through automated expense categorization and personalized budget insights.",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/xizzxy/ruby",

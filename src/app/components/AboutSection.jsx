@@ -10,7 +10,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Node.js</li>
-        <li>Express</li>
+        <li>Django</li>
         <li>Git & Github</li>
         <li>Python</li>
         <li>JavaScript</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         
-        <li>Florida Atlantic University - Expected 2027
+        <li>Florida Atlantic University - Expected 2026
 </li>
       </ul>
     ),
@@ -36,7 +36,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>IBM Data Science (Coursera, February 2024)</li>
         <li> Machine Learning Specialization (DeepLearning.AI)</li>
-        <li>Google Professional Cloud Developer</li>
+      
       </ul>
     ),
   },
@@ -59,12 +59,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I’m a Junior Developer with a real passion for building interactive and responsive web applications. My journey so far has equipped me with skills in JavaScript, React, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I’m always on the lookout for new learning opportunities because I believe there’s always room to grow and new things to discover. My curiosity drives me to explore more, and I love working with a team where we can share ideas and inspire each other to achieve great things.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
