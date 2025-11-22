@@ -1,7 +1,8 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useTransition, useState, useRef } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { motion, useInView } from "framer-motion";
 
 const TAB_DATA = [
   {
@@ -45,6 +46,8 @@ const TAB_DATA = [
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -53,16 +56,39 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image
-          src="/images/about-image.png"
-          width={500}
-          height={500}
-          alt="About section image"
-        />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+    <section className="text-white relative py-16" id="about" ref={ref}>
+      {/* Subtle gradient background glow around image */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(139,92,246,0.1),transparent_70%)] pointer-events-none blur-3xl" />
+
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
+          animate={isInView ? { opacity: 1, x: 0, filter: "blur(0px)" } : { opacity: 0, x: -50, filter: "blur(10px)" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="relative"
+        >
+          <Image
+            src="/images/about-image.png"
+            width={500}
+            height={500}
+            alt="About section image"
+            className="rounded-xl"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          className="mt-4 md:mt-0 text-left flex flex-col h-full"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-4xl font-bold text-white mb-4"
+          >
+            About Me
+          </motion.h2>
           <p className="text-base lg:text-lg">
           I&apos;m a Software Engineering student who loves building fast, reliable systems and AI-powered tools. I enjoy designing clean backends, experimenting with multi-agent workflows, and shipping projects that solve real problems. Recently, I&apos;ve built tools like a distributed rate-limiter, an AI relocation assistant, and CareerPilot AI, which won 2nd place at Sharkbyte 2025.
           </p>
@@ -89,10 +115,16 @@ const AboutSection = () => {
               Certifications{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
+          <motion.div
+            key={tab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mt-8"
+          >
             {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
