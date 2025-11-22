@@ -6,21 +6,42 @@ import { motion, useInView } from "framer-motion";
 import { title } from "process";
 
 const projectsData = [
-   {
-    id: 7,
-    title: "Money Mundo",
-    description: "Integrated an API and trained a model using supervised learning to help immigrants improve their financial literacy by providing personalized guidance on building credit, managing debt, and making informed financial decisions.",
-    image: "/images/projects/7.png",
-    tag: [ "All", "Web"],
-    gitUrl: "https://github.com/salimaduen/Shellhack2024",
-    previewUrl: "https://devpost.com/software/money-mundo?ref_content=user-portfolio&ref_feature=in_progress",
+  {
+    id: 8,
+    title: "CareerPilot AI (2nd Place)",
+    description:
+      "AI career-mapping platform that generates personalized roadmaps for students using multi-agent reasoning for resume analysis, skill matching, and recruiter-style feedback. Deployed on Cloud Run + Cloudflare Workers with async pipelines and vector search.",
+    image: "/images/projects/8.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/xizzxy/Sharkbyte2025",
+    previewUrl: "https://whatdoidoaftercollege.miami/",
+  },
+  {
+    id: 9,
+    title: "NextMove",
+    description:
+      "AI-powered relocation assistant using parallel agents to recommend housing, jobs, lifestyle, and local activities. Integrated Google Cloud, LinkedIn API, and Mapbox for real-time personalized recommendations and interactive map visualizations.",
+    image: "/images/projects/9.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/xizzxy/NextMove",
+    previewUrl: "https://devpost.com/software/nextmove",
+  },
+  {
+    id: 10,
+    title: "Helios",
+    description:
+      "Distributed token-bucket rate limiter built in Go with Redis, gRPC, Docker, and Prometheus/Grafana dashboards. Scales to 50k req/sec. Demo available on LinkedIn.",
+    image: "/images/projects/10.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/xizzxy/helios",
+    previewUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7369864174081904640/",
   },
 
-  
   {
     id: 3,
     title: "FitMate",
-    description: "Developed a virtual gym trainer that utilizes computer vision and machine learning to detect exercise poses and provide real-time feedback. Created to enhance workout experiences, Fitmate offers various exercise routines and actively tracks your sets and performance, helping you achieve your fitness goals efficiently.",
+    description:
+      "Virtual gym trainer using computer vision and ML to detect exercise poses and give real-time feedback.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/xizzxy/fitmate",
@@ -29,32 +50,33 @@ const projectsData = [
   {
     id: 4,
     title: "BudgetBuddy",
-    description: "Engineered a user-friendly money management app that helps users track expenses, set savings goals, and maintain financial health through automated expense categorization and personalized budget insights.",
+    description:
+      "Money management app with automated expense categorization and personalized budget insights.",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/xizzxy/ruby",
     previewUrl: "https://budgetbudds.netlify.app/",
   },
-
   {
     id: 5,
-    title: "Who's that Pokemon?",
-    description: "My first project, 'Who's that Pokémon,' a beginner-friendly website using CSS, HTML, and JavaScript. The game features a timed, five-question Pokémon guessing quiz with multiple-choice options and scores for user performance.",
+    title: "Who's That Pokémon?",
+    description:
+      "Pokémon guessing game built with HTML, CSS, and JavaScript.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/xizzxy/who-is-that-pokemon/tree/main",
+    gitUrl: "https://github.com/xizzxy/who-is-that-pokemon",
     previewUrl: "https://golden-ganache-ddd52b.netlify.app/",
   },
   {
     id: 6,
     title: "Pantry Tracker",
-    description: "Developed a Pantry Tracker app with Firebase for user authentication and real-time database management, allowing users to efficiently organize their pantry by adding, removing, and searching for items. For a demo, login as guest@project2.com with password Guest123. ",
+    description:
+      "Firebase-powered inventory app with real-time database sync, user auth, and item search.",
     image: "/images/projects/6.png",
-    tag: [ "All", "Web"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/xizzxy/pantryAPP",
     previewUrl: "https://pantry-app-olive.vercel.app/",
   },
- 
 ];
 
 const ProjectsSection = () => {

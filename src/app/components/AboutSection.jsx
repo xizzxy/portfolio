@@ -9,12 +9,12 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Django</li>
-        <li>Git & Github</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>Python, Go, C#, Java, JavaScript/TypeScript</li>
+        <li>FastAPI, Flask, .NET, Node.js</li>
+        <li>React, Next.js, Tailwind</li>
+        <li>Redis, SQL, gRPC, REST APIs</li>
+        <li>Docker, CI/CD, Cloud Run</li>
+        <li>OpenAI APIs, Vertex AI, Cloudflare Workers</li>
       </ul>
     ),
   },
@@ -23,7 +23,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        
+
         <li>Florida Atlantic University - Expected 2026
 </li>
       </ul>
@@ -36,7 +36,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>IBM Data Science (Coursera, February 2024)</li>
         <li> Machine Learning Specialization (DeepLearning.AI)</li>
-      
+
       </ul>
     ),
   },
@@ -59,7 +59,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          I’m a Junior Developer with a real passion for building interactive and responsive web applications. My journey so far has equipped me with skills in JavaScript, React, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git. I’m always on the lookout for new learning opportunities because I believe there’s always room to grow and new things to discover. My curiosity drives me to explore more, and I love working with a team where we can share ideas and inspire each other to achieve great things.
+          I'm a Software Engineering student focused on building AI-driven and distributed systems. I enjoy designing fast, reliable backends, experimenting with multi-agent architectures, and shipping projects that solve real problems. I've built tools like a distributed rate-limiter, a relocation assistant powered by parallel agents, and CareerPilot AI — a platform that generates personalized career roadmaps for students. I love learning new technologies, working with ambitious teams, and bringing ideas to life.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

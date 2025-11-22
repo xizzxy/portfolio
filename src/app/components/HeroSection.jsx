@@ -26,7 +26,7 @@ const HeroSection = () => {
                 1000,
                 "A Software Dev",
                 1000,
-    
+
               ]}
               wrapper="span"
               speed={50}
@@ -44,12 +44,12 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="resume-2024.pdf"
+              href="https://docs.google.com/document/d/1EEg97GWHxYOXqreqsW_-10CViumymL7Vqu8XdTTbPoo/edit?usp=sharing"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Resume
-               
+
               </span>
             </Link>
           </div>
