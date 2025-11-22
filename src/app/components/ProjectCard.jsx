@@ -6,14 +6,14 @@ import { motion, useInView } from "framer-motion";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, tech, index = 0 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   return (
     <motion.li
       ref={ref}
-      initial={{ opacity: 0, y: 50, scale: 0.95 }}
-      animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.95 }}
-      transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
+      transition={{ duration: 0.3, delay: index * 0.08, ease: "easeOut" }}
     >
       <div className="group h-full transition-all duration-300 hover:scale-[1.02]">
         <div

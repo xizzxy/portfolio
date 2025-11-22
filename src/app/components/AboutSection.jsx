@@ -67,9 +67,9 @@ const AboutSection = () => {
 
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
-          animate={isInView ? { opacity: 1, x: 0, filter: "blur(0px)" } : { opacity: 0, x: -50, filter: "blur(10px)" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="relative"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl blur-2xl"></div>
