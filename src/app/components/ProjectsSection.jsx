@@ -13,6 +13,7 @@ const projectsData = [
       "AI career-mapping platform that generates personalized roadmaps for students using multi-agent reasoning for resume analysis, skill matching, and recruiter-style feedback. Deployed on Cloud Run + Cloudflare Workers with async pipelines and vector search.",
     image: "/images/projects/8.png",
     tag: ["All", "Web"],
+    tech: ["Python", "FastAPI", "React", "Next.js", "Google Cloud Run", "Cloudflare Workers", "Gemini API"],
     gitUrl: "https://github.com/xizzxy/Sharkbyte2025",
     previewUrl: "https://whatdoidoaftercollege.miami/",
   },
@@ -23,6 +24,7 @@ const projectsData = [
       "AI-powered relocation assistant using parallel agents to recommend housing, jobs, lifestyle, and local activities. Integrated Google Cloud, LinkedIn API, and Mapbox for real-time personalized recommendations and interactive map visualizations.",
     image: "/images/projects/9.png",
     tag: ["All", "Web"],
+    tech: ["FastAPI", "Next.js", "Vertex AI", "Google Places API", "LinkedIn API", "Mapbox"],
     gitUrl: "https://github.com/xizzxy/NextMove",
     previewUrl: "https://devpost.com/software/nextmove",
   },
@@ -33,6 +35,7 @@ const projectsData = [
       "Distributed token-bucket rate limiter built in Go with Redis, gRPC, Docker, and Prometheus/Grafana dashboards. Scales to 50k req/sec. Demo available on LinkedIn.",
     image: "/images/projects/10.png",
     tag: ["All", "Web"],
+    tech: ["Go", "Redis", "gRPC", "Docker", "Prometheus", "Grafana"],
     gitUrl: "https://github.com/xizzxy/helios",
     previewUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7369864174081904640/",
   },
@@ -44,6 +47,7 @@ const projectsData = [
       "Virtual gym trainer using computer vision and ML to detect exercise poses and give real-time feedback.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
+    tech: ["Python", "OpenCV", "Machine Learning", "React"],
     gitUrl: "https://github.com/xizzxy/fitmate",
     previewUrl: "https://github.com/xizzxy/fitmate",
   },
@@ -54,6 +58,7 @@ const projectsData = [
       "Money management app with automated expense categorization and personalized budget insights.",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
+    tech: ["JavaScript", "Next.js", "LocalStorage"],
     gitUrl: "https://github.com/xizzxy/ruby",
     previewUrl: "https://budgetbudds.netlify.app/",
   },
@@ -64,6 +69,7 @@ const projectsData = [
       "Pokémon guessing game built with HTML, CSS, and JavaScript.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
+    tech: ["HTML", "CSS", "JavaScript"],
     gitUrl: "https://github.com/xizzxy/who-is-that-pokemon",
     previewUrl: "https://golden-ganache-ddd52b.netlify.app/",
   },
@@ -74,6 +80,7 @@ const projectsData = [
       "Firebase-powered inventory app with real-time database sync, user auth, and item search.",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
+    tech: ["React", "Firebase Auth", "Firebase Realtime DB"],
     gitUrl: "https://github.com/xizzxy/pantryAPP",
     previewUrl: "https://pantry-app-olive.vercel.app/",
   },
@@ -135,6 +142,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              tech={project.tech}
             />
           </motion.li>
         ))}

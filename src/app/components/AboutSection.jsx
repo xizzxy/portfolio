@@ -64,7 +64,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          I&apos;m a Software Engineering student focused on building AI-driven and distributed systems. I enjoy designing fast, reliable backends, experimenting with multi-agent architectures, and shipping projects that solve real problems. I&apos;ve built tools like a distributed rate-limiter, a relocation assistant powered by parallel agents, and CareerPilot AI — a platform that generates personalized career roadmaps for students. I love learning new technologies, working with ambitious teams, and bringing ideas to life.
+          I&apos;m a Software Engineering student who loves building fast, reliable systems and AI-powered tools. I enjoy designing clean backends, experimenting with multi-agent workflows, and shipping projects that solve real problems. Recently, I&apos;ve built tools like a distributed rate-limiter, an AI relocation assistant, and CareerPilot AI, which won 2nd place at Sharkbyte 2025.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
