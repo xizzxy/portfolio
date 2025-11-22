@@ -35,7 +35,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, tech, ind
             </Link>
           </div>
         </div>
-        <div className="text-white rounded-b-xl bg-[#181818]/40 backdrop-blur-md border border-white/10 shadow-lg hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 py-6 px-4">
+        <div className="text-white rounded-b-xl glass-premium hover:shadow-glow-hover transition-all duration-300 py-6 px-4">
           <h5 className="text-xl font-semibold mb-2">{title}</h5>
           <p className="text-[#ADB7BE]">{description}</p>
           <div className="flex flex-wrap gap-2 mt-4">

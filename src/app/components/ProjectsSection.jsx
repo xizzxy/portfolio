@@ -105,9 +105,12 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="relative py-16" ref={ref}>
-      {/* Subtle gradient background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08),transparent_70%)] pointer-events-none" />
+    <section id="projects" className="relative py-16 overflow-hidden" ref={ref}>
+      {/* Blue/Pink gradient orb behind "My Projects" header */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[400px] glow-orb-blue blur-3xl opacity-20 rounded-full pointer-events-none"></div>
+
+      {/* Pink accent glow on right side */}
+      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] glow-orb-pink blur-3xl opacity-15 rounded-full pointer-events-none float-slow"></div>
 
       <div className="relative z-10">
         <motion.h2

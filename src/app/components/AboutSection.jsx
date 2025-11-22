@@ -25,7 +25,9 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
 
-        <li>Florida Atlantic University - Expected 2026
+        <li>Major: Computer Science - Minor: AI
+        </li>
+        <li>Florida Atlantic University - Expected May 2027
 </li>
       </ul>
     ),
@@ -56,9 +58,12 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white relative py-16" id="about" ref={ref}>
-      {/* Subtle gradient background glow around image */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(139,92,246,0.1),transparent_70%)] pointer-events-none blur-3xl" />
+    <section className="text-white relative py-16 overflow-hidden" id="about" ref={ref}>
+      {/* Magenta glowing orb behind About image */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] glow-orb-pink blur-3xl opacity-25 rounded-full pointer-events-none"></div>
+
+      {/* Subtle blue accent */}
+      <div className="absolute right-10 bottom-10 w-[350px] h-[350px] glow-orb-blue blur-3xl opacity-20 rounded-full pointer-events-none"></div>
 
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 relative z-10">
         <motion.div
@@ -67,12 +72,13 @@ const AboutSection = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative"
         >
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl blur-2xl"></div>
           <Image
             src="/images/about-image.png"
             width={500}
             height={500}
             alt="About section image"
-            className="rounded-xl"
+            className="rounded-xl relative z-10 shadow-glow-pink"
           />
         </motion.div>
         <motion.div

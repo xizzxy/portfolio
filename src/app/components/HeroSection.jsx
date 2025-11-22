@@ -10,8 +10,14 @@ const HeroSection = () => {
   const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   return (
-    <section className="lg:py-16" ref={ref}>
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section className="lg:py-16 relative" ref={ref}>
+      {/* Purple glowing orb behind hero image */}
+      <div className="absolute top-0 right-0 lg:right-10 w-[500px] h-[500px] glow-orb-purple blur-3xl opacity-30 rounded-full pointer-events-none"></div>
+
+      {/* Pink accent glow */}
+      <div className="absolute bottom-10 left-10 w-[300px] h-[300px] glow-orb-pink blur-3xl opacity-20 rounded-full pointer-events-none float-slow"></div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -42,7 +48,7 @@ const HeroSection = () => {
           <div>
             <Link
               href="https://www.linkedin.com/in/ischiappas"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white shadow-glow-purple transition-all duration-300 hover:shadow-glow-hover"
             >
               Hire Me
             </Link>
@@ -50,7 +56,7 @@ const HeroSection = () => {
               href="https://docs.google.com/document/d/1EEg97GWHxYOXqreqsW_-10CViumymL7Vqu8XdTTbPoo/edit?usp=sharing"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 transition-all duration-300">
                 Resume
 
               </span>
@@ -61,9 +67,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center mt-4 lg:mt-0 relative"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-[#181818]/20 backdrop-blur-sm w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative shadow-glow-purple border border-white/5">
             <Image
               src="/images/hero-image.png"
               alt="hero image"

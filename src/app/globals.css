@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 30;
+  --background-end-rgb: 5, 5, 15;
 }
 
 html {
@@ -22,12 +14,67 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background:
+    radial-gradient(circle at 20% 10%, rgba(90, 0, 200, 0.25), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 120, 0.18), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(10, 10, 30, 0.98), rgba(5, 5, 15, 1));
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background gradient orbs */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.15), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.12), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.10), transparent 40%);
+  animation: gradientDrift 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gradientDrift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translate(-5%, -5%) rotate(120deg);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate(5%, 5%) rotate(240deg);
+    opacity: 0.7;
+  }
+}
+
+/* Subtle pulsing glow animation */
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
 }
 
 /* Enhanced glassmorphism utilities */
@@ -40,11 +87,73 @@ body {
     @apply bg-white/10 backdrop-blur-lg border border-white/20;
   }
 
+  .glass-premium {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 8px 32px 0 rgba(99, 102, 241, 0.15),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
   .shadow-glow {
     box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.15);
   }
 
   .shadow-glow-hover {
     box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.25);
+  }
+
+  .shadow-glow-purple {
+    box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.25);
+  }
+
+  .shadow-glow-pink {
+    box-shadow: 0 8px 32px 0 rgba(236, 72, 153, 0.25);
+  }
+
+  .glow-orb-purple {
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent 70%);
+    animation: gentlePulse 8s ease-in-out infinite;
+  }
+
+  .glow-orb-blue {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 70%);
+    animation: gentlePulse 10s ease-in-out infinite;
+  }
+
+  .glow-orb-pink {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.3), transparent 70%);
+    animation: gentlePulse 12s ease-in-out infinite;
+  }
+
+  .glow-orb-cyan {
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.3), transparent 70%);
+    animation: gentlePulse 9s ease-in-out infinite;
+  }
+
+  .float-slow {
+    animation: floatSlow 15s ease-in-out infinite;
+  }
+}
+
+/* Ensure content is above background layers */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Motion safe preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
